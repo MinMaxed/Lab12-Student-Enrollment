@@ -15,13 +15,6 @@ namespace StudentEnrollment.Models
 
         [Required]
         public int MaxStudents { get; set; }
-    }
-
-    public enum Enum
-    {
-        Lying101 = 1,
-        ArtOfTheGrift,
-        WasteOfTime,
-        FreeDegree605
+  
     }
 }

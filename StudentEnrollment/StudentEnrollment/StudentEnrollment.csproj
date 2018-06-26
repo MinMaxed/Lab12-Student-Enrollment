@@ -13,4 +13,19 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Student\Create.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Student\Details.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Student\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Student\ViewAll.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,18 @@
+﻿@model StudentEnrollment.Models.Student
+
+
+<form method="post" asp-controller="Student" form-action="Create">
+    <div>
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label asp-for="Course">What Course do you want to take</label>
+        <input asp-for="Course" />
+    </div>
+
+    <button type="submit">Create Student</button>
+
+
+</form>
