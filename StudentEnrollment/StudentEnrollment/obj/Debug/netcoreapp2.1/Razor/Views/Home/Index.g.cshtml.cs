@@ -47,7 +47,7 @@ namespace AspNetCore
             WriteLiteral("<h2>Welcome to \'School\'</h2>\r\n\r\n<p>What you wanna look at</p>\r\n\r\n<p>");
             EndContext();
             BeginContext(68, 66, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "608c7bbf1480465ba2696d13558a81e4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e4669ed13354c6d8c45f77183ea9ae2", async() => {
                 BeginContext(115, 15, true);
                 WriteLiteral("Create a Course");
                 EndContext();
@@ -71,7 +71,7 @@ namespace AspNetCore
             WriteLiteral("</p>\r\n\r\n<p>");
             EndContext();
             BeginContext(145, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e65efe80e11c49538184b3fb93ac0405", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed6cc33e8bd44c4694e7e95b2a996416", async() => {
                 BeginContext(193, 16, true);
                 WriteLiteral("Create a Student");
                 EndContext();
@@ -95,7 +95,7 @@ namespace AspNetCore
             WriteLiteral("</p>\r\n\r\n<p>");
             EndContext();
             BeginContext(224, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed338e2e184e4d79ae99479fc32ef3dc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cd352722ac3c4641bafafb70879b3c0c", async() => {
                 BeginContext(272, 16, true);
                 WriteLiteral("View all Courses");
                 EndContext();
@@ -119,7 +119,7 @@ namespace AspNetCore
             WriteLiteral("</p>\r\n\r\n<p>");
             EndContext();
             BeginContext(303, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc7dccd9c3eb45fcbe922dabb6e92c00", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbb1bb30af6845f2b1a10b6842979251", async() => {
                 BeginContext(352, 17, true);
                 WriteLiteral("View all Students");
                 EndContext();
