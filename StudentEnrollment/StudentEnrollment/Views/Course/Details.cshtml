@@ -1,0 +1,13 @@
+﻿@using StudentEnrollment.Models
+@model StudentEnrollment.Models.CourseDetailViewModel
+
+<h1>Details</h1>
+
+<h3>@Model.Course.Name</h3>
+<h3>@Model.Course.MaxStudents</h3>
+
+@foreach (var student in Model.Students)
+{
+    <p>Name: @student.Name</p>
+    <p>Course: @student.Course</p>
+}

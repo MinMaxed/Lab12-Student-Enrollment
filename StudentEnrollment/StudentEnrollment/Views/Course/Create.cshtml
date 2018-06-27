@@ -1,0 +1,18 @@
+﻿@model StudentEnrollment.Models.Course
+
+
+<form method="post" asp-controller="Course" form-action="Create">
+    <div>
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label asp-for="MaxStudents">Maximum Number of Students</label>
+        <input asp-for="MaxStudents" />
+    </div>
+
+    <button type="submit">Create Course</button>
+
+
+</form>
