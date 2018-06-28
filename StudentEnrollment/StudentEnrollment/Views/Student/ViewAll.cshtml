@@ -1,3 +1,11 @@
-﻿@model StudentEnrollment.Models.Student
+﻿@model List<StudentEnrollment.Models.Student>
 
-Here are all of the students
+<h2>Students</h2>
+
+@foreach (var student in Model)
+{
+    <h3>@student.Name</h3>
+    <h3>@student.Course</h3>
+    <p><a asp-controller="Student" asp-action="Details" asp-route-id="@student.ID">View Details</a></p>
+    <hr />
+}

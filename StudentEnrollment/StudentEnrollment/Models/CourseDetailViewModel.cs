@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace StudentEnrollment.Models
 {
+    /// <summary>
+    /// this is for viewing the data from the Courses
+    /// </summary>
     public class CourseDetailViewModel
     {
         public IEnumerable<Student> Students { get; set; }

@@ -23,32 +23,62 @@ namespace StudentEnrollment.Controllers
             _context = context;
         }
 
+        //go to Student create home page
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            //connects to the Courses in the database to be used in the drop down menu on the Create page
+            ViewData["Courses"] = await _context.Courses.Select(c => c).ToListAsync();
+            return View();
+        }
+
+        //
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("ID,Name,Course,CourseID")]Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                student.Course = await _context.Courses.Where(c => c.ID == student.CourseID).SingleAsync();
+
+                _context.Students.Add(student);
+
+                await _context.SaveChangesAsync();
+                //int id = student.ID;
+                ViewData["Courses"] = await _context.Courses.Select(c => c).ToListAsync();
+                return View("ViewAll");
+
+            }
+            ViewData["Courses"] = await _context.Courses.Select(c => c).ToListAsync();
+            return View(student);
+        }
+
+
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Update(int? id)
         {
-            return View();
+            if (id.HasValue)
+            {
+                Student student = await _context.Students.FirstOrDefaultAsync(s => s.ID == id);
+                return View(student);
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("ID, Name, Course, CourseID")] Student student)
+        public async Task<IActionResult> Update(Student student)
         {
-
-            await _context.Students.AddAsync(student);
+            _context.Students.Update(student);
             await _context.SaveChangesAsync();
 
-            int id = student.ID;
             return View();
         }
-
-
 
         public async Task<IActionResult> ViewAll()
         {
             var dta = await _context.Students.ToListAsync();
 
             return View(dta);
-
         }
     }
 }

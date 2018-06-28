@@ -14,6 +14,8 @@ namespace StudentEnrollment.Models
         public string Name { get; set; }
     
         public Course Course { get; set; }
+
+        [Required]
         public int CourseID { get; set; }
     }
 }

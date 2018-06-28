@@ -12,7 +12,6 @@ namespace StudentEnrollment.Models
 
         [Required]
         public string Name { get; set; }
-
         [Required]
         public int MaxStudents { get; set; }
   

@@ -1,18 +1,21 @@
-﻿@model StudentEnrollment.Models.Student
+﻿@using StudentEnrollment.Models
+@model StudentEnrollment.Models.Student
 
 
-<form method="post" asp-controller="Student" form-action="Create">
+<form method="post" asp-controller="Student" asp-action="Create">
     <div>
         <label asp-for="Name">Name</label>
         <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
     </div>
 
     <div>
         <label asp-for="Course">What Course do you want to take</label>
-        <input asp-for="Course" />
-    </div>
+        @(Html.DropDownListFor(l => l.CourseID, new SelectList((IEnumerable<Course>)ViewData["Courses"], "ID", "Name")))
+        @*<span asp-validation-for="CourseID"></span>*@
+    </div>  
 
-    <button type="submit">Create Student</button>
+    <input type="submit" value="Create"/>
 
 
 </form>

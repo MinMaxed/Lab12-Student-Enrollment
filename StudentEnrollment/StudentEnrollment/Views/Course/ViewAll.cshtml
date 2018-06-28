@@ -1,3 +1,12 @@
-﻿@model StudentEnrollment.Models.Course
+﻿@model List<StudentEnrollment.Models.Course>
 
-Here are all of the courses
+
+<h2>Courses</h2>
+
+@foreach (var course in Model)
+{
+    <h3>@course.Name</h3>
+    <h3>@course.MaxStudents</h3>
+    <p><a asp-controller="Course" asp-action="Details" asp-route-id="@course.ID">View Details</a></p>
+    <hr/>
+}
